@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before and After</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #333;
+      color: #fff;
+      margin: 0;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+    }
+
+    header:before {
+      content: "";
+      background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+      opacity: 0.4;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    header > h1 {
+      font-size: 4rem;
+      margin: 1rem;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .is-required:after {
+      content:"*";
+      color: red;
+      padding-left: 2px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>And I know as you collapse into me</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, minima.</p>
+  </header>
+  <section>
+    <h3>This is the start of something</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil necessitatibus quo dolorem assumenda ipsa consequatur voluptatem, saepe cumque vel praesentium.</p>
+    <form action="">
+      <label for="name" class="is-required">name</label>
+      <input type="text">
+    </form>
+  </section>
+</body>
+</html>
